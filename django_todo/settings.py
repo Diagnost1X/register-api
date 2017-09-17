@@ -26,9 +26,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'k)x$z-7^a_h)4sqs+k)r5w-^gb*e7ajbwq@fnf7^v=@e$)5w!e'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['angular-register-api.herokuapp.com']
 
 
 # Application definition
