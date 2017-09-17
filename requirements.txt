@@ -17,3 +17,4 @@ singledispatch==3.4.0.3
 six==1.10.0
 whitenoise==3.2
 wrapt==1.10.11
+mysql-python==1.2.5
