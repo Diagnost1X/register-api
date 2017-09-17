@@ -15,4 +15,5 @@ pylint==1.7.2
 pytz==2017.2
 singledispatch==3.4.0.3
 six==1.10.0
+whitenoise==3.2
 wrapt==1.10.11
