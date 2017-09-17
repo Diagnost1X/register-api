@@ -18,3 +18,5 @@ six==1.10.0
 whitenoise==3.2
 wrapt==1.10.11
 mysql-python==1.2.5
+django-cors-headers==2.1.0
+drfdocs==0.0.11

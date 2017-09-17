@@ -28,7 +28,7 @@ SECRET_KEY = 'k)x$z-7^a_h)4sqs+k)r5w-^gb*e7ajbwq@fnf7^v=@e$)5w!e'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['angular-register-api.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'angular-register-api.herokuapp.com']
 
 
 # Application definition
@@ -41,8 +41,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'rest_framework_docs',
     'todo',
     'accounts',
+    'corsheaders',
 ]
 
 REST_FRAMEWORK = {
@@ -69,7 +71,15 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
+
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_CREDENTIALS = True
+CORS_ORIGIN_WHITELIST = (
+    'http://localhost:8080',
+    'http://127.0.0.1:8080',
+)
 
 ROOT_URLCONF = 'django_todo.urls'
 
@@ -90,6 +100,9 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'django_todo.wsgi.application'
+
+SECURE_SSL_REDIRECT = True
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 
 # Database
